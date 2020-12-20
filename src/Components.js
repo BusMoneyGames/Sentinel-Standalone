@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup'
 
 class LoggingButton extends React.Component {
     state = {
@@ -28,9 +30,19 @@ class LoggingButton extends React.Component {
 
     render() {
       return (
-        <button onClick={this.handleClick}>
+        <ButtonGroup size="small" orientation="vertical" color="primary"
+        variant="text"
+        >
+        <Button variant="contained" onClick={this.handleClick}>
           Click me {this.state.pollingCount}
-        </button>
+        </Button>
+
+        <Button variant="contained"onClick={this.handleClick}>
+          Second One {this.state.pollingCount}
+        </Button>
+        
+
+        </ButtonGroup>
       );
     }
   }
